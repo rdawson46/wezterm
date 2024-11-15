@@ -7,7 +7,7 @@ config.colors = theme.colors()
 config.colors.background = '#232323'
 
 config.font = wezterm.font('JetBrains Mono')
-config.font_size = 16
+config.font_size = 12
 
 
 config.use_fancy_tab_bar = false
@@ -15,9 +15,9 @@ config.hide_tab_bar_if_only_one_tab = true
 
 -- hide if using image
 --[[
-]]--
 config.window_background_opacity = 0.85
 config.text_background_opacity = 0.9
+]]--
 
 --[[
 -- astronaut
@@ -44,5 +44,19 @@ config.window_padding = {
     top = 2,
     bottom = 2,
 }
+
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+    config.default_prog = { "powershell.exe" }
+    --[[
+    -- astronaut
+    config.window_background_image = "C:/Users/Ryan Crooks/.config/wezterm/backgrounds/astro-jelly.jpg"
+    -- spaceship
+    config.window_background_image = "C:/Users/Ryan Crooks/.config/wezterm/backgrounds/voyage.jpg"
+    -- planets
+    config.window_background_image = "C:/Users/Ryan Crooks/.config/wezterm/backgrounds/space.jpg"
+    ]]--
+    -- japan
+    config.window_background_image = "C:/Users/Ryan Crooks/.config/wezterm/backgrounds/fuji.jpg"
+end
 
 return config
